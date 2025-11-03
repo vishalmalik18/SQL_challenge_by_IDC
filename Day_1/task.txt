@@ -1,0 +1,11 @@
+-- Retrieve all patient details
+SELECT * FROM patients;
+
+-- Select specific columns
+SELECT patient_id, name AS patient_name, age FROM patients;
+
+-- View first 10 records
+SELECT * FROM services_weekly LIMIT 10;
+
+-- Find unique services
+SELECT DISTINCT service FROM services_weekly;
