@@ -1,0 +1,16 @@
+# Count the total number of patients in the hospital.
+select count(patient_id) as `total number of patients` from patients;
+
+# Calculate the average satisfaction score of all patients.
+select avg(satisfaction) `average satisfaction` from patients;
+
+# Find the minimum and maximum age of patients.
+select min(age) as `minimum age`,
+max(age) as `maximum age`
+from patients;
+
+# Calculate the total number of patients admitted, total patients refused, and the average patient satisfaction across all services and weeks. Round the average satisfaction to 2 decimal places.
+select sum(patients_admitted) as `total patients admitted`,
+sum(patients_refused) as `total patients refused`,
+round(avg(patient_satisfaction),2) as `average patient satisfaction`
+from services_weekly;
