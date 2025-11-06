@@ -1,1 +1,26 @@
+# Find services that have admitted more than 500 patients in total.
+select service,sum(patients_admitted) as `total_admitted` from services_weekly
+group by service
+having sum(patients_admitted)>500;
 
+# Show services where average patient satisfaction is below 75.
+select service,avg(patient_satisfaction) 
+from services_weekly
+group by service
+having avg(patient_satisfaction)<75;
+
+# List weeks where total staff presence across all services was less than 50.
+select week,sum(staff_morale)from services_weekly
+group by week
+having sum(staff_morale)<50;
+
+# Identify services that refused more than 100 patients in total and had an average patient satisfaction below 80. Show service name, total refused, and average satisfaction.
+select 
+	service as `service_name`,
+    sum(patients_refused) as `total_refused`,
+    avg(patient_satisfaction) as `avg_satisfaction`
+from services_weekly
+group by service
+having 
+	sum(patients_refused)>100 and
+    avg(patient_satisfaction)<80;
