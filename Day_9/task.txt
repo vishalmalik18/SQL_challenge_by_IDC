@@ -1,1 +1,23 @@
+# Extract the year from all patient arrival dates.
 
+select year(arrival_date) from patients;
+
+#Extract the year from all patient arrival dates.
+
+select datediff(departure_date,arrival_date) as length_of_stay
+from patients;
+
+# Find all patients who arrived in a specific month.
+
+select*from patients
+where year(arrival_date) = 2025 
+and month(arrival_date) = 6;
+
+#  Calculate the average length of stay (in days) for each service, showing only services where the average stay is more than 7 days. Also show the count of patients and order by average stay descending.
+
+select count(patient_id),
+service,avg(datediff(departure_date,arrival_date)) as avg_length_stay
+from patients
+group by service
+having avg(datediff(departure_date,arrival_date))>7
+order by avg_length_stay desc;
