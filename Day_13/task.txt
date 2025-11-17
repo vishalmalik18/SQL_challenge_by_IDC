@@ -29,20 +29,3 @@ on p.service = s.service
 group by p.patient_id,p.name,p.age,p.service
 having count(s.staff_id)>5
 order by total_staff desc,p.name;
-
-
-
-
-
-
-
-
-
-
-
-
-inner join staff as s
-on p.service = s.service
-group by p.patient_id,p.name,p.age,p.service
-having count(s.staff_id)>5
-order by total_staff desc,p.name;
