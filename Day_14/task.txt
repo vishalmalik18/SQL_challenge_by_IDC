@@ -11,7 +11,6 @@ select sw.week,ss.staff_id,ss.staff_name,ss.role,sw.service
 from services_weekly as sw
 right join staff_schedule as ss
 on sw.service = ss.service
-where ss.present=0;
 
 # Display all patients and their service's weekly statistics (if available).
 select p.patient_id,p.name,p.age,p.service, sw.available_beds,sw.patients_request,sw.patients_admitted,sw.patients_refused,sw.patient_satisfaction,sw.week
