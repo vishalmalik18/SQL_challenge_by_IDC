@@ -9,7 +9,7 @@ on st.staff_id = ss.staff_id;
 # List all services from services_weekly and their corresponding staff (show services even if no staff assigned).
 select sw.week,ss.staff_id,ss.staff_name,ss.role,sw.service
 from services_weekly as sw
-right join staff_schedule as ss
+left join staff_schedule as ss
 on sw.service = ss.service
 
 # Display all patients and their service's weekly statistics (if available).
