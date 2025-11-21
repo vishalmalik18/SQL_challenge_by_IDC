@@ -1,3 +1,5 @@
+# Create a report showing each service with: service name, total patients admitted, the difference between their total admissions and the average admissions across all services, and a rank indicator ('Above Average', 'Average', 'Below Average'). Order by total patients admitted descending.
+
 with service_totals as (
 	select
 		service,
