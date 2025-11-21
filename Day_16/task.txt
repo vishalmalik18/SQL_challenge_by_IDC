@@ -1,1 +1,15 @@
-
+select 
+  p.patient_id,
+	p.name,
+  p.service,
+  p.satisfaction
+from patients as p
+where p.service in (
+  select sw.service
+  from services_weekly as sw
+  group by sw.service
+  having sum(case when sw.patients_refused>0 then 1 else 0 end) >0
+  and
+  avg(sw.patient_satisfaction)<(select avg(patient_satisfaction) 
+  from services_weekly)
+);
