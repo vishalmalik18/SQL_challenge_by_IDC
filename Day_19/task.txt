@@ -1,0 +1,18 @@
+select
+	service,
+	patient_satisfaction,
+	patients_admitted,
+    satisfaction_rank
+from (
+select
+	service,
+	week,
+	patient_satisfaction,
+	patients_admitted,
+	rank() over(
+		partition by service
+        order by patient_satisfaction desc
+        ) as satisfaction_rank
+	from services_weekly
+) as ranked
+where satisfaction_rank <= 3;
