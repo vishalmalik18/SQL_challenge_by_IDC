@@ -1,0 +1,46 @@
+WITH service_metrics AS (
+    SELECT
+        service,
+        SUM(patients_admitted) AS total_admissions,
+        SUM(patients_refused) AS total_refusals,
+        AVG(patient_satisfaction) AS avg_satisfaction
+    FROM services_weekly
+    GROUP BY service
+),
+
+staff_metrics AS (
+    SELECT
+        service,
+        COUNT(*) AS total_staff
+    FROM staff
+    GROUP BY service
+),
+
+patient_metrics AS (
+    SELECT
+        service,
+        COUNT(*) AS patient_count,
+        AVG(age) AS avg_age
+    FROM patients
+    GROUP BY service
+)
+
+SELECT
+    sm.service,
+    sm.total_admissions,
+    sm.total_refusals,
+    sm.avg_satisfaction,
+    st.total_staff,
+    pm.patient_count,
+    pm.avg_age,
+    (
+        (sm.total_admissions * 1.0 /
+            NULLIF(sm.total_admissions + sm.total_refusals, 0)) * 0.7
+        +
+        (sm.avg_satisfaction / 100.0) * 0.3
+    ) AS performance_score
+
+FROM service_metrics sm
+LEFT JOIN staff_metrics st ON sm.service = st.service
+LEFT JOIN patient_metrics pm ON sm.service = pm.service
+ORDER BY performance_score DESC;
