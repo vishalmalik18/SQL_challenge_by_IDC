@@ -1,0 +1,19 @@
+select
+	service,
+    week,
+    patients_admitted,
+    patient_satisfaction,
+    avg(patient_satisfaction) over(
+		partition by service
+        order by week
+        rows between 2 preceding and current row
+    ) as moving_avg_3,
+    sum(patients_admitted) over(
+		partition by service
+        order by week
+        ) as running_total_admitted,
+	patients_admitted - avg(patients_admitted) over(partition by service)
+    as diff_from_service_avg
+from services_weekly
+where week between 10 and 20
+order by service,week;
