@@ -36,7 +36,7 @@ This challenge helped me strengthen my understanding of:
 - MySQL
 - MySQL Workbench
 
----
+
 
 ## 👤 Author
 
