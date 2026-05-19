@@ -4,7 +4,7 @@ This repository contains my solutions, practice queries, and learning progress f
 
 ---
 
-Throughout this challenge, I practiced:
+🚀 Throughout this challenge, I practiced:
 
 - SQL Fundamentals
 - Filtering & Sorting
