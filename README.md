@@ -17,18 +17,6 @@ Throughout this challenge, I practiced:
 # 🏆 Appreciation Certificate
 ![Certificate](Images/1764674192413.jpg)
 
----
-
-## 🛠️ Tools Used
-
-- SQL
-- MySQL
-- MySQL Workbench
-
----
-
-
-
 ## 🌟 Learning Outcome
 
 This challenge helped me strengthen my understanding of:
@@ -38,6 +26,14 @@ This challenge helped me strengthen my understanding of:
 - Query optimization concepts
 - Relational database fundamentals
 - Practical SQL implementation
+
+---
+
+## 🛠️ Tools Used
+
+- SQL
+- MySQL
+- MySQL Workbench
 
 ---
 
