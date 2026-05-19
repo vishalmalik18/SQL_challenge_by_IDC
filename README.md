@@ -27,7 +27,7 @@ This challenge helped me strengthen my understanding of:
 - Relational database fundamentals
 - Practical SQL implementation
 
----
+
 
 ## 🛠️ Tools Used
 
