@@ -17,3 +17,9 @@ Throughout this challenge, I practiced:
 
 # 🏆 Appreciation Certificate
 ![Certificate](Images/1764674192413.jpg)
+
+## 👤 Author
+
+**Vishal Malik**  
+🔗 [LinkedIn](https://www.linkedin.com/in/vishalmalik18/)  
+🔗 [GitHub](https://github.com/vishalmalik18)
