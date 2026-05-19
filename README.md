@@ -15,8 +15,5 @@ Throughout this challenge, I practiced:
 
 ---
 
-# Challenge Streak
-![Challenge Streak](Images/1764569105617.jpg)
-
 # 🏆 Appreciation Certificate
 ![Certificate](Images/1764674192413.jpg)
