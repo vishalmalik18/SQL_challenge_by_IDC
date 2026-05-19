@@ -18,6 +18,20 @@ Throughout this challenge, I practiced:
 # 🏆 Appreciation Certificate
 ![Certificate](Images/1764674192413.jpg)
 
+---
+
+## 🌟 Learning Outcome
+
+This challenge helped me strengthen my understanding of:
+
+- Writing efficient SQL queries
+- Database problem solving
+- Query optimization concepts
+- Relational database fundamentals
+- Practical SQL implementation
+
+---
+
 ## 👤 Author
 
 **Vishal Malik**  
