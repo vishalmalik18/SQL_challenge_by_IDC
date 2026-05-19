@@ -13,6 +13,16 @@ Throughout this challenge, I practiced:
 - Database Concepts
 - Real-world Query Problems
 
+---
+
+## 🛠️ Tools Used
+
+- SQL
+- MySQL
+- MySQL Workbench
+
+---
+
 
 
 # 🏆 Appreciation Certificate
